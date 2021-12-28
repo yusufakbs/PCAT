@@ -15,16 +15,11 @@ exports.getAllPhotos = async (req, res) => {
     pages: Math.ceil(totalPhotos / photosPerPage),
   });
 
-  // console.log(req.query);
-  // const photos = await Photo.find({}).sort('-dateCreated');
-  // res.render('index', {
-  //   photos,
-  // });
+ 
 };
 
 exports.getPhoto = async (req, res) => {
-  //console.log(req.params.id);
-  //res.render('about');
+  
   const photo = await Photo.findById(req.params.id);
   res.render('photo', {
     photo,
@@ -32,9 +27,7 @@ exports.getPhoto = async (req, res) => {
 };
 
 exports.createPhoto = async (req, res) => {
-  // console.log(req.files.image);
-  // await Photo.create(req.body);
-  // res.redirect('/');
+ 
 
   const uploadDir = 'public/uploads';
 
